@@ -1,7 +1,8 @@
+
 /*
  * 🚨 WARNING: CHALLENGE MODE ACTIVATED 🚨
  * 
- * 1️⃣ Sit back, take a deep breath, and **THINK**.
+  1️⃣ Sit back, take a deep breath, and **THINK**.
  * 2️⃣ For the next **10 minutes**, avoid using **Gen AI, ChatGPT, or any shortcuts**.
  * 3️⃣ Trust your **brain**—you’re smarter than you think!
  * 4️⃣ Consider yourself a **LOSER** if you cheat. Seriously, promise yourself you won't. 😤
