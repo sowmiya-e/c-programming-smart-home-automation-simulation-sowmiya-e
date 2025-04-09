@@ -1,57 +1,41 @@
-/*
- * 🚨 WARNING: CHALLENGE MODE ACTIVATED 🚨
- * 
- * 1️⃣ Sit back, take a deep breath, and **THINK**.
- * 2️⃣ For the next **10 minutes**, avoid using **Gen AI, ChatGPT, or any shortcuts**.
- * 3️⃣ Trust your **brain**—you’re smarter than you think!
- * 4️⃣ Consider yourself a **LOSER** if you cheat. Seriously, promise yourself you won't. 😤
- * 5️⃣ If you solve it on your own, **you WIN** and level up as a true programmer and come and meet me ! 
- * 
- * 
- * 💡 Remember: The best coders aren’t the ones who copy-paste. They are the ones who **struggle, think, fail, and then succeed.** 
- *    
- * Now, write your code! You got this! 💪🔥
- */
-
 #include <stdio.h>
 
-#define MAX_ROOMS 5  //  max number of rooms
-
-// Function prototypes
-void initializeSystem();
-void displayMenu();
-void controlLights();
-void readTemperature();
-void detectMotion();
-void securitySystem();
-void analyzeHouseStatus();
+// Function Prototypes
+void initializeSystem(int rooms, int lights[], int temp[], int motion[], int locks[]);
+void toggleLight(int rooms, int lights[]);
+void readTemperature(int rooms, int temp[]);
+void detectMotion(int rooms, int motion[]);
+void securitySystem(int rooms, int locks[]);
+void analyzeHouseStatus(int rooms, int lights[], int temp[], int motion[], int locks[], int *noMotionCounter);
 
 int main() {
-    
+    int rooms;
+    printf("Enter number of rooms: ");
+    scanf("%d", &rooms);
+
+    int lights[rooms], temp[rooms], motion[rooms], locks[rooms];
+    int noMotionCounter = 0;
+    initializeSystem(rooms, lights, temp, motion, locks);
+
+    int choice;
+    do {
+        printf("\n===== Smart Home Menu =====\n");
+        printf("1. Toggle Light\n2. Read Temperature\n3. Check Motion Sensor\n4. Lock/Unlock Security System\n5. House Status Summary\n6. Exit\nEnter your choice: ");
+        scanf("%d", &choice);
+        
+        switch (choice) {
+            case 1: toggleLight(rooms, lights); break;
+            case 2: readTemperature(rooms, temp); break;
+            case 3: detectMotion(rooms, motion); break;
+            case 4: securitySystem(rooms, locks); break;
+            case 5: analyzeHouseStatus(rooms, lights, temp, motion, locks, &noMotionCounter); break;
+            case 6: printf("Exiting...\n"); break;
+            default: printf("Invalid choice! Try again.\n");
+        }
+    } while (choice != 6);
 
     return 0;
 }
 
- 
-void initializeSystem() {
-  
-}
 
-void displayMenu() {
-   
-}
-void controlLights() {
 
-}
-void readTemperature() {
-
-}
-void detectMotion() {
-
-}
-void securitySystem() {
-
-}
-void analyzeHouseStatus() {
-
-}
